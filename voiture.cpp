@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
-#include "classe.hpp"
+#include "voiture.hpp"
+#include  <windows.h>
 
 using namespace std;
 

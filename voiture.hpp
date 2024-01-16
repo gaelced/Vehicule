@@ -2,24 +2,18 @@
 using namespace std;
 
 
-class Voiture
+class Voiture :public Vehicule
 {
 private:
-    string marque;
-    int vitesse;
+   bool aLaClim;
     
 public:
     Voiture();
     ~Voiture();
-    void setMarque(string marq);
-    void setCouleur(string coul);
-    void setVitesse(int vit);
-    string getMarque();
-    string getCouleur();
-    int getVitesse();
-    string couleur;
-
-
+    voiture (const Voiture & voit);
+    void stAlaClim ();
+    void getAlaClim ();
+    
 };
 
 
