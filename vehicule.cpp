@@ -60,10 +60,10 @@ void Vehicule::getVitesse()
 
 void Vehicule::getMarque()
 {
-    cout << "La marque est de " << m_marque << endl;
+    cout << "La marque est " << m_marque << endl;
 }
 
 void Vehicule::getCouleur()
 {
-    cout << "La couleur est de " << m_couleur << endl;
+    cout << "La couleur est " << m_couleur << endl;
 }

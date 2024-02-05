@@ -1,19 +1,20 @@
+#ifndef DEF_VOITURE
+#define DEF_VOITURE
+#include "Vehicule.hpp"
 #include <string>
-using namespace std;
 
+class Voiture:public Vehicule {
+    private:
 
-class Voiture :public Vehicule
-{
-private:
-   bool aLaClim;
+    int m_ALaClim;
+
+    public :
     
-public:
     Voiture();
+    Voiture(std::string coul, std::string marq, int vit, int pos, int clim);
+    Voiture(const Voiture  &autre);
     ~Voiture();
-    voiture (const Voiture & voit);
-    void stAlaClim ();
-    void getAlaClim ();
-    
+    void setALaClim(int clim);
+    void getALaClim() const;
 };
-
-
+#endif

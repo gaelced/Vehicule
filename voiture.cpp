@@ -1,40 +1,33 @@
-#include <string>
+#include "Voiture.hpp"
 #include <iostream>
-#include "voiture.hpp"
-#include  <windows.h>
 
 using namespace std;
 
-Voiture::Voiture() {
-    this->vitesse=0;
-    cout << "Un objet a été créé" << endl;
+Voiture::Voiture() : Vehicule()
+{
 }
 
-Voiture::~Voiture() {
-    cout << "Un objet a été détruit" << endl;
+Voiture::Voiture(string coul, string marq, int vit, int pos, int clim) : Vehicule(coul, marq, vit, pos)
+{
+    m_ALaClim = clim;
 }
 
-void Voiture::setMarque(string marq) {
-    this->marque = marq;
+Voiture::Voiture(const Voiture &autre) : Vehicule(autre)
+{
+m_ALaClim = autre.m_ALaClim;
 }
 
-void Voiture::setCouleur(string coul) {
-    this->couleur = coul;
+Voiture::~Voiture()
+{
+    cout<<"un objet a ete detruit"<<endl;
 }
 
-void Voiture::setVitesse(int vit) {
-    this->vitesse = vit;
-}
+void Voiture::setALaClim(int clim)
+ {
+        m_ALaClim = clim;
+ }
 
-string Voiture::getCouleur() {
-    return this->couleur;
-}
-
-string Voiture::getMarque() {
-    return this->marque;
-}
-
-int Voiture::getVitesse() {
-    return this->vitesse;
-}
-
+ void Voiture::getALaClim() const
+ {
+    cout<<"la clim est a :" << m_ALaClim <<endl;
+ }

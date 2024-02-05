@@ -23,6 +23,10 @@ class Vehicule {
     void getMarque();
     void seDeplacer(int pos);
 
+    virtual void afficher() const =0;
+
+
+
 };
 
 #endif
